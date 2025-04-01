@@ -173,7 +173,7 @@ class PGv2Unit implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['short_caption'] = isset($data['short_caption']) ? $data['short_caption'] : null;

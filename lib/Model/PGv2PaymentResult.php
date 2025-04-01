@@ -198,7 +198,7 @@ class PGv2PaymentResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['result_code'] = isset($data['result_code']) ? $data['result_code'] : null;
         $this->container['is_authorized'] = isset($data['is_authorized']) ? $data['is_authorized'] : null;

@@ -178,7 +178,7 @@ class PGv2CancelResult implements ModelInterface, ArrayAccess
      * @param mixed[] $data Associated array of property values
      *                      initializing the model
      */
-    public function __construct(array $data = null)
+    public function __construct(?array $data = null)
     {
         $this->container['canceled_price'] = isset($data['canceled_price']) ? $data['canceled_price'] : null;
         $this->container['is_partial_cancel'] = isset($data['is_partial_cancel']) ? $data['is_partial_cancel'] : null;
