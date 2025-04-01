@@ -512,8 +512,8 @@ class PGv2OrderResult implements ModelInterface, ArrayAccess
      *
      * @return boolean
      */
-    public function offsetExists($offset)
-    {
+    public function offsetExists($offset): bool
+	{
         return isset($this->container[$offset]);
     }
 
@@ -524,8 +524,8 @@ class PGv2OrderResult implements ModelInterface, ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($offset)
-    {
+    public function offsetGet($offset): mixed
+	{
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
     }
 
@@ -537,7 +537,7 @@ class PGv2OrderResult implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, mixed $value): void
     {
         if (is_null($offset)) {
             $this->container[] = $value;
@@ -553,7 +553,7 @@ class PGv2OrderResult implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->container[$offset]);
     }
