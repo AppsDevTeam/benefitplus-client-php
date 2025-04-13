@@ -193,8 +193,8 @@ class PGv2OrderResult implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
-    {
+    public function getModelName(): string
+	{
         return self::$swaggerModelName;
     }
 

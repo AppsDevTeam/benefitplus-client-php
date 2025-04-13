@@ -153,8 +153,8 @@ class PGv2Unit implements ModelInterface, ArrayAccess
      *
      * @return string
      */
-    public function getModelName()
-    {
+    public function getModelName(): string
+	{
         return self::$swaggerModelName;
     }
 
@@ -304,8 +304,8 @@ class PGv2Unit implements ModelInterface, ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
-    {
+    public function offsetUnset($offset): void
+	{
         unset($this->container[$offset]);
     }
 
